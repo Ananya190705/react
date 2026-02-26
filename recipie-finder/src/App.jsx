@@ -28,13 +28,14 @@ function App() {
   };
   return (
     <div style={styles.container}>
-      <h1>🍴 Recipie Finder</h1>
+      <h1>🍴 Recipe Finder</h1>
       <form onSubmit={searchRecipies} style={styles.form}>
         <input
           type="text"
           placeholder="Search Recipes..."
           value={querry}
           onChange={(e) => setQuerry(e.target.value)}
+           style={styles.input}
         />
         <button style={styles.button}>Search</button>
       </form>
@@ -68,28 +69,62 @@ function App() {
     </div>
   );
 }
-const styles = {
-  container: { textAlign: "center", padding: "20px", fontFamily: "Arial" },
-  form: { marginBottom: "20px" },
-  input: { padding: "10px", fontSize: "16px", width: "250px" },
-  button: { padding: "5px", fontSize: "18px",borderRadius:"15px", marginLeft: "10px",textAlign:"center" },
+  const styles = {
+  container: {
+    textAlign: "center",
+    padding: "40px",
+    fontFamily: "'Poppins', sans-serif",
+    background: "linear-gradient(to right, #fff1eb, #ace0f9)",
+    minHeight: "100vh",
+  },
+
+  form: {
+    marginBottom: "30px",
+  },
+
+  input: {
+    padding: "12px 20px",
+    fontSize: "16px",
+    width: "300px",
+    borderRadius: "25px",
+    border: "1px solid #ddd",
+    outline: "none",
+     color: "#333",
+     backgroundColor: "white"
+  },
+
+  button: {
+    padding: "12px 20px",
+    fontSize: "16px",
+    borderRadius: "25px",
+    marginLeft: "10px",
+    border: "none",
+    backgroundColor: "#ff6b6b",
+    color: "white",
+    cursor: "pointer",
+    transition: "0.3s",
+  },
+
   grid: {
-    display: "flex",
-    flexWrap: "wrap",
-    gap: "20px",
-    justifyContent: "center",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    gap: "25px",
+    marginTop: "20px",
   },
+
   card: {
-    width: "200px",
-    border: "1px solid #ccc",
-    borderRadius: "10px",
-    padding: "10px",
+    background: "white",
+    borderRadius: "15px",
+    padding: "15px",
+    boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+    transition: "0.3s",
   },
+
   img: {
     width: "100%",
     height: "200px",
     objectFit: "cover",
-    borderRadius: "8px",
+    borderRadius: "10px",
   },
 };
 export default App;
