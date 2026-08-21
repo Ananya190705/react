@@ -1,4 +1,4 @@
-import { useState } from "react";
+import MovieDetails from "./pages/MovieDetails";
 import "./css/App.css";
 import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
@@ -13,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/favorites" element={<Favorite />} />
+          <Route path="/movie/:id" element={<MovieDetails />} />
         </Routes>
       </main>
     </MovieProvider>

@@ -10,7 +10,8 @@
 }
 
 .movie-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(229, 9, 20, 0.35);
 }
 
 .movie-poster {
@@ -128,4 +129,20 @@
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
+}
+.no-poster {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #111, #1f1f1f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.no-poster h3 {
+  color: #e50914;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
